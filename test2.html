@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> Test </TITLE>
+  <script>
+  var i=0;
+  	function test()
+	{
+		alert("Here testing the change");
+		i=i+1;
+		var ni = document.getElementById('language');
+		var newFields = document.getElementById('languageid').cloneNode(true);
+		newFields.id = 'q'+i;
+		newFields.value="";
+		newFields.style.display = 'block';
+		newFields.name = 'languageid[]';
+		var newField = newFields.childNodes;
+		ni.appendChild(newFields);
+	
+	}
+  </script>
+ </HEAD>
+
+ <BODY>
+ <div id="language">
+  <input type="text" id="languageid" name="languageid[]"/>
+  </div>
+  <input type="button" name="GetMore" value="Get More" onclick="test()"/>
+ </BODY>
+</HTML>
